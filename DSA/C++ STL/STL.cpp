@@ -118,6 +118,10 @@ int main(){
 
     //3D vector of dimension 10x20x30
     vector<vector<vector<int>>> vec1(10,vector<vector<int>> (20,vector<int> (30,0)));
+    
+
+
+
 
 
 

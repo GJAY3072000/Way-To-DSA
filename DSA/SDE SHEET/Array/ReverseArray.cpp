@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 void reverseArray(int arr[],int start,int end){
@@ -19,10 +19,12 @@ void printArray(int arr[],int size){
 }
 
 int main(){
-    int arr,n;
-    cin>>"Enter the size of the array">>n;
+    int arr;
+    int n;
+    cout<<"Enter the size of the array"<<"\n";
+    cout<<"enter the elements of the array:"<<"\n";
     for(int i=0;i<=n;i++){
-        cin>>"Enter the array input">>arr[i];
+        cin>>arr[i];
     }
     reverseArray(arr[],0,n);
     cout<<"Reversed array is:"<<endl;
