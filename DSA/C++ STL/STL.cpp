@@ -341,6 +341,100 @@ int main(){
     //here the time complexity in n*log(n)
 
 
+    //Bitset
+    // it only stores 1 or 0
+    //int-> 16 bits
+    //char-> 8 bits
+    //bitset-> 1 bit
+
+    bitset<5> bt ={10101};
+    // it is used in lot of segment tree problems
+
+    cin>>bt; //-> 10101
+
+    //all
+    cout<<bt.all();//-> it returns true or false on the basis of if all the bits are 0/1 or not
+    //any
+    cout<<bt.any(); // -> it returns true or false if any one of the bit is set
+
+    //count
+    cout<<bt.count(); // it will return the number of set bits
+    //flip
+    bt.flip(2); // it will flip the particular index value from 0 to 1 and vice versa
+
+    //none
+    //if none is set then true else false
+    cout<<bt.none();
+
+    //set
+    bt.set();//it will set all the values to 1
+    bt.set(2); //it will set the 2 index poisition to 1
+    bt.set(2,0); //it will set the 2 index position to 0
+    //reset
+    bt.reset(); //this will turn all indexes to 0
+    bt.reset(); // 2 index to 0
+    //size
+    bt.size();
+    //test
+    bt.test(1);// check if the particular index is set or not
+
+
+
+    //algorithms
+    //sorting
+    //array , vector
+    int n;
+    cin>> n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    sort(arr,arr+n);//sort in increasing order
+
+    vector<int> vec(5,0);
+    for(int i=0;i<n;i++){
+        cin>>vec[i];
+    }
+
+    sort(vec.begin(),vec.end()); //[) 
+
+    //reverse 
+    reverse(arr,arr+n);
+
+    reverse(vec.begin(),vec.end());
+
+    // max element
+    int maxi=INT_MIN;
+    int i,j;
+    int a[n];
+    for(int k=i;k<=j;k++){
+        if(a[k]>maxi){
+            maxi=a[k];
+        }
+
+    }
+
+    int el = *max_element(arr,arr+n);
+    int el = *min_element(arr,arr+n);
+
+    int arr[n];
+    int sum = accumulate(arr,arr+n);
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
    
