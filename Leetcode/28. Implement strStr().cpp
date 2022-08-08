@@ -23,3 +23,34 @@ public:
 		return -1;
 	}
 };
+
+
+
+// 2nd Approach Using z function 
+class Solution {
+public:
+    vector<int> z_function(string s) {
+    int n = (int) s.length();
+    vector<int> z(n);
+    for (int i = 1, l = 0, r = 0; i < n; ++i) {
+        if (i <= r)
+            z[i] = min (r - i + 1, z[i - l]);
+        while (i + z[i] < n && s[z[i]] == s[i + z[i]])
+            ++z[i];
+        if (i + z[i] - 1 > r)
+            l = i, r = i + z[i] - 1;
+    }
+    return z;
+}
+    
+    int strStr(string haystack, string needle) {
+        string new_string = needle+'$'+haystack;
+        vector<int> z =z_function(new_string);
+        for(int i=0;i<new_string.size();i++){
+            if(z[i] == needle.size()){
+                return (i-(int)needle.size()-1);
+            }
+        }
+        return -1;
+    }
+};
